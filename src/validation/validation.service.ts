@@ -20,7 +20,7 @@ export class ValidationService {
             const dateDiff = Math.abs(creationDate - currentDate);
             const diffDays = Math.ceil(dateDiff / (1000 * 3600 * 24));
 
-            if(diffDays > 0){
+            if(diffDays > 30){
                 throw Error('Chave já expirada');
             }else {
                 return response;
